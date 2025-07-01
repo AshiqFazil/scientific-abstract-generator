@@ -1,7 +1,3 @@
-Absolutely!
-Here’s a **clean, detailed, formal** `README.md` — no emojis, no file structure block — written clearly to help your audience (teachers, reviewers, or the public) understand what your *Scientific Abstract Generator* project does, how it’s built, and how to run it.
-
----
 
 ## Scientific Abstract Generator
 
