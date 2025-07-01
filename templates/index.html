@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Scientific Abstract Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>AI-Powered Scientific Abstract Generator</h1>
+        <form id="generateForm">
+
+            <label for="title">Paper Title:</label>
+            <input type="text" id="title" name="title" required placeholder="Enter paper title">
+
+            <label for="keywords">Keywords (comma-separated):</label>
+            <input type="text" id="keywords" name="keywords" required placeholder="e.g., AI, NLP, Deep Learning">
+
+            <label for="domain">Research Domain:</label>
+            <select id="domain" name="domain" required>
+                <option value="" disabled selected>Select domain</option>
+                <option value="cs.AI">Computer Science</option>
+                <option value="physics.gen-ph">Physics</option>
+                <option value="q-bio">Biology</option>
+                <option value="math">Mathematics</option>
+                <option value="eess">Engineering</option>
+            </select>
+
+            <button type="submit">Generate Abstract</button>
+        </form>
+
+        <div id="loader" class="loader"></div>
+
+        <div id="resultSection" class="result" style="display:none;">
+    <h2>Generated Abstract</h2>
+    <p id="generatedAbstract"></p>
+    <button id="copyBtn">Copy</button>
+    <div id="wordCount"></div>
+</div>
+
+    </div>
+
+    <footer>
+        <p>© {{ year }} AI Scientific Abstract Generator | Built for research assistance</p>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
